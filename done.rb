@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 LOCK_FILE = 'lock'
 
 kata = `cat #{LOCK_FILE}`.strip()
