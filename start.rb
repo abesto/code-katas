@@ -64,5 +64,6 @@ language = choose_language()
 kata = choose_kata()
 kata_dir = build_kata_path(language, kata)
 prepare_kata(language, kata_dir)
-puts "cd #{kata_dir}"
+puts "You can now start working in #{kata_dir}"
+puts "When done, just come back here and say ./done.rb"
 
