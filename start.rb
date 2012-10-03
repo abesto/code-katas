@@ -3,12 +3,12 @@ require 'date'
 
 KATAS_DIR = 'katas'
 TEMPLATES_DIR = 'templates'
-LOCK_FILE = 'lock'  # shared with stop.rb
+LOCK_FILE = 'lock'  # shared with done.rb
 
 def abort_if_lock
   if File.exists?(LOCK_FILE)
     current = `cat #{LOCK_FILE}`.strip()
-    puts "Finish #{current} first! (./stop.sh)"
+    puts "Finish #{current} first! (./done.rb)"
     exit 1
   end
 end
