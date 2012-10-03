@@ -3,6 +3,15 @@ require 'date'
 
 KATAS_DIR = 'katas'
 TEMPLATES_DIR = 'templates'
+LOCK_FILE = 'lock'  # shared with stop.rb
+
+def abort_if_lock
+  if File.exists?(LOCK_FILE)
+    current = `cat #{LOCK_FILE}`.strip()
+    puts "Finish #{current} first! (./stop.sh)"
+    exit 1
+  end
+end
 
 def choose_language
   choose_dir(TEMPLATES_DIR, 'Language:')
@@ -24,8 +33,9 @@ end
 
 def prepare_kata(language, kata_dir)
   `cp -r #{TEMPLATES_DIR}/#{language} #{kata_dir}`
+  `echo #{kata_dir} > #{LOCK_FILE}`
   `git add #{kata_dir}`
-  `git commit #{kata_dir} -m "Started #{kata-dir}"`
+  `git commit #{kata_dir} -m "Started #{kata_dir}"`
 end
 
 def choose_dir(dir, prompt)
@@ -49,6 +59,7 @@ def choose(options)
 end
 
 `git pull`
+abort_if_lock()
 language = choose_language()
 kata = choose_kata()
 kata_dir = build_kata_path(language, kata)
