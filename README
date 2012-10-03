@@ -1,0 +1,27 @@
+Quick hack to quickly get code katas up and running.
+Example session:
+
+
+$ ./start.rb
+
+Language:
+0. ruby
+Choice: 0
+
+Kata:
+0. prime-factors
+Choice: 0
+You can now start working in katas/prime-factors/ruby-20121003-0
+When done, just come back here and say ./done.rb
+
+# Do the kata
+
+$ ./done.rb 
+Running tests for katas/prime-factors/ruby-20121003-0
+Tests failed. Can't finish the kata if tests fail.
+
+# Work some more
+
+$ ./done.rb
+Running tests for katas/prime-factors/ruby-20121003-0
+Grats, that's another one down. Don't forget to push!
