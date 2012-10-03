@@ -14,5 +14,5 @@ end
 
 puts "Grats, that's another one down. Don't forget to push!"
 `git add .`
-`git commit . -m "finished #{kata}"`
+`git commit . -m "Finished #{kata}"`
 
