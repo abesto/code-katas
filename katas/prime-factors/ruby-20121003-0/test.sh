@@ -1,2 +1,3 @@
 #!/bin/bash
-rspec ./spec.rb --format nested
+ruby -w ./code.rb
+rspec ./spec.rb --format nested 
