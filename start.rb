@@ -15,7 +15,7 @@ end
 
 def choose_language
   choose_dir(TEMPLATES_DIR, 'Language:')
-end 
+end
 
 def choose_kata
   choose_dir(KATAS_DIR, 'Kata:')
@@ -27,7 +27,7 @@ def build_kata_path(language, kata)
   postfix = 0
   while Dir.exists?("#{kata_dir}-#{postfix}")
     postfix += 1
-  end 
+  end
   "#{kata_dir}-#{postfix}"
 end
 
@@ -35,6 +35,7 @@ def prepare_kata(language, kata_dir)
   `cp -r #{TEMPLATES_DIR}/#{language} #{kata_dir}`
   `echo #{kata_dir} > #{LOCK_FILE}`
   `git add #{kata_dir}`
+  `git checkout -b "#{kata_dir}"`
   `git commit #{kata_dir} -m "Started #{kata_dir}"`
 end
 
@@ -66,4 +67,3 @@ kata_dir = build_kata_path(language, kata)
 prepare_kata(language, kata_dir)
 puts "You can now start working in #{kata_dir}"
 puts "When done, just come back here and say ./done.rb"
-
