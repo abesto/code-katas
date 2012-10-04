@@ -1,4 +1,4 @@
 def prime_factors(n)
-  return [n] if n > 1
-  []
+  return [] if n < 2
+  [n]
 end
