@@ -1,6 +1,10 @@
 require './code'
 
-describe 'code module' do
-  it 'exists' do end
+describe 'prime_factors' do
+  {0 => []}.each do |input, output|
+    it "#{input} -> #{output}" do
+      prime_factors(input).should eq output
+    end
+  end
 end
 
