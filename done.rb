@@ -2,6 +2,7 @@
 
 LOCK_FILE = 'lock'
 
+pwd = Dir.pwd
 kata = `cat #{LOCK_FILE}`.strip()
 Dir.chdir(kata)
 
@@ -13,6 +14,8 @@ unless $? == 0
 end
 
 puts "Grats, that's another one down. Don't forget to push!"
-`git add .`
-`git commit . -m "Finished #{kata}"`
 
+Dir.chdir(pwd)
+`git commit . -m "Finished #{kata}"`
+`git checkout master && git merge #{kata} --no-ff`
+`git branch -d #{kata}`

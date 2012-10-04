@@ -1,4 +1,5 @@
 Quick hack to quickly get code katas up and running.
+It also records your kata by using a branch for each kata "run".
 The master branch contains all katas I did using these scripts.
 The framework branch contains only the framework.
 
@@ -17,15 +18,25 @@ Kata:
 Choice: 0
 You can now start working in katas/prime-factors/ruby-20121003-0
 When done, just come back here and say ./done.rb
+(creates a new branch, checks it out)
 
-# Do the kata
+# Write test
+./test.sh
+tests fail (creates a commit with message FAIL)
+
+# Write code
+./test.sh
+tests pass (creates a commit with message PASS)
+
+# Write test
 
 $ ./done.rb 
 Running tests for katas/prime-factors/ruby-20121003-0
 Tests failed. Can't finish the kata if tests fail.
 
-# Work some more
+# Write code
 
 $ ./done.rb
 Running tests for katas/prime-factors/ruby-20121003-0
 Grats, that's another one down. Don't forget to push!
+(Commits, merges the kata into master, deletes the branch reference)
