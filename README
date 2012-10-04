@@ -40,3 +40,16 @@ $ ./done.rb
 Running tests for katas/prime-factors/ruby-20121003-0
 Grats, that's another one down. Don't forget to push!
 (Commits, merges the kata into master, deletes the branch reference)
+
+
+Resulting git history:
+
+* (master) Merge branch 'katas/prime-factors/ruby-20121003-0'
+|\
+| * PASS
+.........
+| * PASS
+| * FAIL
+| * Started katas/prime-factors/ruby-20121004-0
+|/
+* (old master)
