@@ -1,6 +1,8 @@
 require './code'
 
-describe 'code module' do
-  it 'exists' do end
+describe 'prime_factors' do
+  it 'returns [] for 0' do
+    prime_factors(0).should eq([])
+  end
 end
 
