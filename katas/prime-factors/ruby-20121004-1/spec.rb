@@ -4,7 +4,8 @@ describe 'prime_factors' do
   {
       0 => [],
       1 => [],
-      2 => [2]
+      2 => [2],
+      3 => [3]
   }.each do |input, output|
     it "returns #{output} for #{input}" do
       prime_factors(input).should eq(output)
