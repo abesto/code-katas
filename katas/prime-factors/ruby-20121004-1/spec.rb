@@ -6,11 +6,11 @@ describe 'prime_factors' do
   end
 
   it 'returns [] for 1' do
-    prime_factors(0).should eq([])
+    prime_factors(1).should eq([])
   end
 
   it 'returns [2] for 2' do
-    prime_factors(0).should eq([2])
+    prime_factors(2).should eq([2])
   end
 end
 
