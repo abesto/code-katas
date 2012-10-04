@@ -19,3 +19,4 @@ Dir.chdir(pwd)
 `git commit . -m "Finished #{kata}"`
 `git checkout master && git merge #{kata} --no-ff`
 `git branch -d #{kata}`
+`rm #{LOCK_FILE}`
