@@ -1,2 +1,2 @@
-class Code
+def main(input)
 end

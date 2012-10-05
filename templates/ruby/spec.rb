@@ -1,6 +1,7 @@
 require './code'
 
-describe 'code module' do
-  it 'exists' do end
+describe 'kata' do
+  it 'exists' do
+  end
 end
 
